@@ -24,7 +24,7 @@ class Libretto:
         if (self.hasConfitto(voto) is False
                 and self.hasVoto(voto) is False):
             self.voti.append(voto)
-            if not self.dao.hasVoto(voto):
+            if not self.dao.hasVoto(voto): #chiedo al database se ha già il voto, se non ce l'ha lo aggiungo io
                 self.dao.addVoto(voto)
         else:
             raise ValueError("Il voto è già presente")

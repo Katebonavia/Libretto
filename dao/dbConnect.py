@@ -4,11 +4,11 @@ import mysql.connector
 class DBConnect:
 
     @classmethod
-    def getConnection(cls):
+    def getConnection(self):
         try:
             cnx = mysql.connector.connect(
                 user = "root",
-                password = "rootroot",
+                password = "Cate87752",
                 host = "127.0.0.1",
                 database = "libretto")
             return cnx
@@ -16,3 +16,4 @@ class DBConnect:
             print("Non riesco a collegarmi al database")
             print(err)
             return None
+

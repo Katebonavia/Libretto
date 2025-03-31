@@ -22,7 +22,7 @@ class Voto:
     #             self.punteggio == other.punteggio and
     #             self.lode == other.lode)
 
-    def __eq__(self, other):
+    def __eq__(self, other): #solo sul parametro materia perchè è la chiave
         return self.materia == other.materia
 
     def __hash__(self):
